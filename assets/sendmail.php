@@ -34,7 +34,7 @@ if($_POST) {
     if($clientName != '' && isEmail($clientEmail) && $message != '') {
         // Send email
 	$headers = "From: " . $clientName . " <" . $clientEmail . ">" . "\r\n" . "Mobile: " . $mobile . "\r\n" . "Message: " . $message;
-	mail($emailTo,$message,$headers);
+	mail($emailTo,$headers);
     }
 
     echo json_encode($array);
